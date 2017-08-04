@@ -48,7 +48,6 @@ module.exports = {
             filename: 'index.html',
             template: root.TPL_PATH,
             vendorName: bundleConfig.vendor.js,
-            reactName: bundleConfig.react.js,
             inject: 'body',
             minify: {
                 removeComments: true,            //去注释
@@ -59,10 +58,6 @@ module.exports = {
         new webpack.DllReferencePlugin({
             context: __dirname,
             manifest: require('../debug/vendor-manifest.json')
-        }),
-        new webpack.DllReferencePlugin({
-            context: __dirname,
-            manifest: require('../debug/react-manifest.json')
         })
     ],
     resolve: {
