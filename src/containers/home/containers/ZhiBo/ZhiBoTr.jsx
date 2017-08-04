@@ -54,7 +54,7 @@ export default class ZhiBoTr extends React.Component {
             <div>
                 <WhiteSpace size="sm"/>
                 <div className="fzt_order">
-                    <div className="fzt_orderText">目前排序：</div>
+                    <div>目前排序：</div>
                     <Popover
                         mask
                         visible={visible}
@@ -119,12 +119,12 @@ export default class ZhiBoTr extends React.Component {
                         ]}
                     >
                         <div className="fzz_text">
-                            <div>
-                                {children}
-                            </div>
                             <div className="fzz_orderSvg">
                                 <Icon size="xs"
                                       type={require('../../../../images/icons/order.svg')}/>
+                            </div>
+                            <div>
+                                {children}
                             </div>
                         </div>
                     </Popover>

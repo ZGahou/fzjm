@@ -26,6 +26,7 @@ export default class Home extends React.Component {
         );
         peer.on('open', () => {
             const conn = peer.connect('s2ww5auvvro4j9k9');
+            console.log(conn);
             conn.on('open', () => {
                     this.setState({
                         peer: peer

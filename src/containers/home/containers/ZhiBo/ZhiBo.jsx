@@ -129,12 +129,12 @@ export default class ZhiBo extends React.Component {
                                     overlay={this.cid(haoDanCid.data, selected)}
                                 >
                                     <div className="fzz_text">
-                                        <div>
-                                            {children}
-                                        </div>
                                         <div className="fzz_orderSvg">
                                             <Icon size="xs"
                                                   type={require('../../../../images/icons/fenlei.svg')}/>
+                                        </div>
+                                        <div>
+                                            {children}
                                         </div>
                                     </div>
                                 </Popover>

@@ -2,12 +2,14 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import Action from '../../../../store/actions';
+import {withRouter} from 'react-router-dom'
 import {RefreshControl, ListView, WingBlank, WhiteSpace, Card, Icon} from 'antd-mobile';
 
 @connect(
     state => ({...state}),
     dispatch => bindActionCreators(Action, dispatch)
 )
+@withRouter
 export default class ZiXuanTr extends React.Component {
     constructor(props) {
         super(props);
@@ -62,6 +64,8 @@ export default class ZiXuanTr extends React.Component {
     }
 
     row(rowData) {
+        const { match, location, history } = this.props;
+        console.log(history);
         console.log(rowData);
     }
 

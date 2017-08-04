@@ -5,7 +5,7 @@ import Action from '../../../../store/actions';
 import {Card, RefreshControl, ListView, WingBlank, WhiteSpace, Icon, Modal} from 'antd-mobile';
 import api from '../../../../api';
 
-const alert = Modal.alert;
+const alertFZJK = Modal.alert;
 const getHaoDanKuAPI = '/TaoKeAction.php?act=getHaoDanKu';
 const addZiXuanAPI = '/TaoKeAction.php?act=addZiXuan';
 
@@ -280,7 +280,7 @@ export default class ZhiBoCard extends React.Component {
                                                 </div>
                                                 <div className="fzp_add">
                                                     <Icon
-                                                        onClick={() => alert('温馨提示：', '您确定加入自选列表么???',
+                                                        onClick={() => alertFZJK('温馨提示：', '您确定加入自选列表么???',
                                                             [
                                                                 {text: '取消', onPress: () => console.log('cancel')},
                                                                 {
@@ -300,16 +300,14 @@ export default class ZhiBoCard extends React.Component {
                     </WingBlank>
                 </
                     div>
-            )
-                ;
+            );
         };
         return (
             <ListView
-
                 dataSource={dataSource}
                 renderRow={row}
                 style={{
-                    height: document.documentElement.clientHeight / 2 + 150,
+                    height: document.documentElement.clientHeight * 3 / 4 - 80,
                     margin: '0.1rem 0',
                 }}
                 initialListSize={5}
