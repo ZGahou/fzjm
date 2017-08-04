@@ -127,8 +127,8 @@ export default class PaoDan extends React.Component {
                 <div key={rowID}>
                     <WingBlank size="sm">
                         <WhiteSpace size="md"/>
-                        <Card>
-                            <Card.Body>
+                        <Card style={{'margin-bottom': '0.18rem'}} className="rowData">
+                            <Card.Body style={{'border-top': '0 solid #ddd'}}>
                                 <div className="fzp_bigBox">
                                     <div className="fzj_imgBox">
                                         <img
