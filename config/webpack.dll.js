@@ -11,15 +11,10 @@ const vendors = [
     'history'
 ];
 
-const react = [
-    'react',
-    'react-dom',
-];
 
 module.exports = {
     entry: {
-        vendor: vendors,
-        react: react,
+        vendor: vendors
     },
     output: {
         path: root.DEBUG_PATH,

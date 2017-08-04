@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom'
 import App from './containers/App';
 import Home from './containers/home/containers/Home';
+import ZiXuanDetail from './containers/home/containers/ZiXuanList/ZiXuanDetail';
 
 export default class router extends React.Component {
     constructor(props) {
@@ -19,7 +20,7 @@ export default class router extends React.Component {
                     return (
                         <Switch key={location.pathname}>
                             <Route location={location} exact path="/" component={Home}/>
-                            <Route location={location} path="/detail:id" component={Home}/>
+                            <Route location={location} path="/zixuandetail" component={ZiXuanDetail}/>
                             <Route component={NoMatch}/>
                         </Switch>
                     )
