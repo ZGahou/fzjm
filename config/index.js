@@ -16,6 +16,6 @@ exports.config = {
     DIST_API: "http://fenzhongjinke.com",                   //生产接口
 
     // 服务器配置
-    server_host: '192.168.1.101',
+    server_host: '127.0.0.1',
     server_port: 3000
 };

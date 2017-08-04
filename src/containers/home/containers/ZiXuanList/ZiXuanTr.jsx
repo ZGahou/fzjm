@@ -64,9 +64,12 @@ export default class ZiXuanTr extends React.Component {
     }
 
     row(rowData) {
-        const { match, location, history } = this.props;
-        console.log(history);
-        console.log(rowData);
+        const {history, location} = this.props;
+        history.push(
+            {
+                pathname: '/zixuandetail',
+                query: rowData
+            });
     }
 
     render() {
