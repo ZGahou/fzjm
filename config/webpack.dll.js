@@ -1,6 +1,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const assetsPlugin = require('assets-webpack-plugin');
+const cleanWebpackPlugin = require('clean-webpack-plugin');
 const config = require('../config');
 const root = config.config;
 
@@ -10,7 +11,6 @@ const vendors = [
     'immutable',
     'history'
 ];
-
 
 module.exports = {
     entry: {
@@ -22,6 +22,14 @@ module.exports = {
         library: '[name]_library'    //将会定义为 window.${output.library}
     },
     plugins: [
+        new cleanWebpackPlugin(
+            ['debug/*'],　                                //匹配删除的文件
+            {
+                root: path.resolve(__dirname, '../'),     //根目录
+                verbose: false,        　　　　　　　　  //是否开启在控制台输出信息
+                dry: false        　　　　　　　　　 　  //启用删除文件
+            }
+        ),
         new webpack.DllPlugin({
             context: __dirname,
             path: path.join(__dirname, '../debug', '[name]-manifest.json'),

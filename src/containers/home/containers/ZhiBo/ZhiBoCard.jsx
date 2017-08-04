@@ -225,8 +225,8 @@ export default class ZhiBoCard extends React.Component {
                 <div key={rowID}>
                     <WingBlank size="sm">
                         <WhiteSpace size="md"/>
-                        <Card style={{'margin-bottom': '0.18rem'}} className="rowData">
-                            <Card.Body style={{'border-top': '0 solid #ddd'}}>
+                        <Card style={{marginBottom: '0.18rem'}} className="rowData">
+                            <Card.Body style={{borderTop: '0 solid #ddd'}}>
                                 <div className="fzp_bigBox">
                                     <div className="fzj_imgBox">
                                         <img
